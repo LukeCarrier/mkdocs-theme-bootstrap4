@@ -1,9 +1,9 @@
 suppress_nextprev: true
 
 highlightjs: true
-hljs_languages:
+highlightjs_languages:
   - http
-hljs_style: github
+highlightjs_style: github
 
 shortcuts:
   help: 191    # ?

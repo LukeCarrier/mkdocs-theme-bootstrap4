@@ -65,7 +65,6 @@ setup(
             '404.html',
             'base.html',
             'content.html',
-            'keyboard-modal.html',
             'main.html',
             'mkdocs_theme.yml',
             'nav-sub.html',

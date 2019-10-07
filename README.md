@@ -28,13 +28,6 @@ theme:
 ```yaml
 # Show next/previous links between pages?
 next_previous: true
-
-# Keyboard shortcuts
-shortcuts:
-  help: 191    # ?
-  next: 78     # n
-  previous: 80 # p
-  search: 83   # s
 ```
 
 ## Hacking

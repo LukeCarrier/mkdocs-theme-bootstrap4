@@ -178,7 +178,6 @@
     {%- block scripts %}
       <script>
         var base_url = {{ base_url | tojson }};
-        var shortcuts = {{ config.theme.shortcuts | tojson }};
       </script>
       {%- for path in config['extra_javascript'] %}
         <script src="{{ path | url }}" defer></script>
@@ -186,7 +185,6 @@
     {%- endblock %}
 
     {% if 'search' in config['plugins'] %}{%- include "search-modal.html" %}{% endif %}
-    {%- include "keyboard-modal.html" %}
   </body>
 </html>
 

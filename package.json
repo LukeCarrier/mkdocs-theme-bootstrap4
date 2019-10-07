@@ -1,6 +1,6 @@
 {
   "name": "mkdocs-theme-bootstrap4",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A vanilla Bootstrap 4 theme",
   "repository": "git@github.com:LukeCarrier/mkdocs-theme-bootstrap4.git",
   "author": "Luke Carrier <luke@carrier.im>",

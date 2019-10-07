@@ -13,7 +13,7 @@ A vanilla Bootstrap 4 theme.
 First install the package:
 
 ```
-$ pip install mkdocs-bootstrap4
+$ pip install mkdocs-theme-bootstrap4
 ```
 
 Then enable it:
@@ -46,7 +46,7 @@ $ pip install -r requirements.txt
 To install the plugin onto a local MkDocs site in editable form:
 
 ```
-$ pip install --editable /path/to/mkdocs-bootstrap4
+$ pip install --editable /path/to/mkdocs-theme-bootstrap4
 ```
 
 ## Releasing

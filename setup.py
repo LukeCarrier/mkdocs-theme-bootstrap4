@@ -49,7 +49,7 @@ with open(path.join(root_dir, 'README.md')) as f:
     long_description = f.read()
 
 setup(
-    name='mkdocs-bootstrap4',
+    name='mkdocs-theme-bootstrap4',
     long_description=long_description,
     long_description_content_type='text/markdown',
     version='0.1.2',
@@ -72,10 +72,10 @@ setup(
             'toc.html',
         ],
     },
-    url='https://github.com/byrnereese/mkdocs-bootstrap4/',
+    url='https://github.com/LukeCarrier/mkdocs-theme-bootstrap4',
     license='MIT',
-    author='Byrne Reese',
-    author_email='byrne@majordojo.com',
+    author='Luke Carrier',
+    author_email='luke@carrier.im',
     description='A vanilla Bootstrap 4 theme',
     install_requires=['mkdocs>=1.0'],
     entry_points={

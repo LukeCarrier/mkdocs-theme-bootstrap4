@@ -25,6 +25,8 @@ theme:
 
 ## Configuration
 
+Place these additional options under the `theme:` section of your `mkdocs.yml` configuration to change the theme's behaviour.
+
 ```yaml
 # Show next/previous links between pages?
 next_previous: true

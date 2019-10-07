@@ -2,6 +2,10 @@ from setuptools import setup
 from os import path
 
 
+data_files = [
+    'css/font-awesome.min.css',
+]
+
 root_dir = path.abspath(path.dirname(__file__))
 with open(path.join(root_dir, 'README.md')) as f:
     long_description = f.read()

@@ -4,6 +4,12 @@
 # Python
 __pycache__/
 
+# Yarn
+/node_modules/
+
+# Build artifacts
+/mkdocs_bootstrap4/dist/
+
 # Packaging
 /*.egg-info/
 /build/

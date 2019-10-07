@@ -90,7 +90,7 @@
             {%- endblock %}
 
             {%- block next_prev %}
-              {%- if page and (page.next_page or page.previous_page) and (not config.theme.suppress_nextprev) %}
+              {%- if page and (page.next_page or page.previous_page) and config.theme.next_previous %}
                 <li class="nav-item{% if not page.previous_page %} disabled{% endif %}">
                   <a class="nav-link" rel="next" {% if page.previous_page %}href="{{ page.previous_page.url | url }}"{% endif %}>
                     <i class="fa fa-arrow-left"></i> Previous

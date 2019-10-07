@@ -1,4 +1,4 @@
-suppress_nextprev: true
+next_previous: true
 
 shortcuts:
   help: 191    # ?

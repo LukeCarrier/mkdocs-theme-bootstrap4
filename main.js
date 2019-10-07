@@ -17,4 +17,8 @@ $(function() {
       $('.dropdown-submenu .show').removeClass('show');
     });
   });
+
+  $('#mkdocs-search-modal').on('shown.bs.modal', e => {
+    $('#mkdocs-search-query').trigger('focus');
+  });
 });

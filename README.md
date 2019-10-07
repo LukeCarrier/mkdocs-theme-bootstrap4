@@ -1,33 +1,89 @@
-# MkDocs Bootstrap4 Theme
+# Bootstrap 4 theme for MkDocs
 
-This project provides a Bootstrap v4.0+ theme is for the [MkDocs] project.
+A vanilla Bootstrap 4 theme.
 
-## Installation
-
-Install the theme with pip:
-
-    pip install mkdocs-bootstrap4
-
-After the theme is installed, edit your [mkdocs.yml] file and set the theme
-[name] to `bootstrap`:
-
-    theme:
-        name: bootstrap4
-
-## Config Parameters
-
-* `suppress_nextprev` - (default: true) Toggles the display of the common "Next" and "Prev" page links in the header.
-
-## Special Features
-
-This theme makes use of the [git-committers plugin](https://github.com/byrnereese/mkdocs-git-committers-plugin) for MkDocs. Consult that plugin's documentation for proper configuration. 
+---
 
 ## Screenshot
 
-<img style="max-width:100%;" alt="Screenshot of Bootstrap4 theme for MkDocs" src="/screenshots/mkdocs-bootstrap4.png" align="center" /><br />
+<img style="max-width:100%;" alt="Screenshot of Bootstrap4 theme for MkDocs" src="screenshots/mkdocs-bootstrap4.png" align="center" /><br />
 
-## See Also
+## Quick start
 
-[MkDocs]: https://www.mkdocs.org
-[mkdocs.yml]: https://www.mkdocs.org/user-guide/configuration/
-[name]: https://www.mkdocs.org/user-guide/configuration/#name
+First install the package:
+
+```
+$ pip install mkdocs-bootstrap4
+```
+
+Then enable it:
+
+```yaml
+theme:
+    name: bootstrap4
+```
+
+## Configuration
+
+```yaml
+# Show next/previous links between pages?
+next_previous: true
+
+# Enable Highlight.js rich syntax highlighting in fenced code blocks?
+highlightjs: true
+# For which languages/protocols?
+highlightjs_languages:
+    - http
+# In which syntax style?
+highlightjs_style: github
+
+# Keyboard shortcuts
+shortcuts:
+  help: 191    # ?
+  next: 78     # n
+  previous: 80 # p
+  search: 83   # s
+```
+
+## Hacking
+
+To get completion working in your editor, set up a virtual environment in the root of this repository and install MkDocs:
+
+```
+$ pip3 install --user --upgrade setuptools twine wheel
+$ python3 -m venv venv
+$ . venv/bin/activate
+$ pip install -r requirements.txt
+```
+
+To install the plugin onto a local MkDocs site in editable form:
+
+```
+$ pip install --editable /path/to/mkdocs-bootstrap4
+```
+
+## Releasing
+
+Build the distributable package:
+
+```
+$ python3 setup.py sdist bdist_wheel
+```
+
+Push it to the PyPI test instance:
+
+```
+$ python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+```
+
+Test it inside a virtual environment:
+
+```
+$ pip install --index-url https://test.pypi.org/simple/ --no-deps mkdocs-drawio-exporter
+```
+
+Let's go live:
+
+```
+$ python3 -m twine upload dist/*
+```

@@ -1,10 +1,5 @@
 suppress_nextprev: true
 
-highlightjs: true
-highlightjs_languages:
-  - http
-highlightjs_style: github
-
 shortcuts:
   help: 191    # ?
   next: 78     # n

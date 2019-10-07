@@ -1,7 +1,10 @@
 import 'bootstrap';
 import '@fortawesome/fontawesome-free/js/all';
+import { initHighlightingOnLoad } from 'highlight.js';
 
 import './main.scss';
+
+initHighlightingOnLoad();
 
 $(function() {
   $('ul.dropdown-menu [data-toggle="dropdown"]').on('click', e => {

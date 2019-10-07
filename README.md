@@ -29,14 +29,6 @@ theme:
 # Show next/previous links between pages?
 next_previous: true
 
-# Enable Highlight.js rich syntax highlighting in fenced code blocks?
-highlightjs: true
-# For which languages/protocols?
-highlightjs_languages:
-    - http
-# In which syntax style?
-highlightjs_style: github
-
 # Keyboard shortcuts
 shortcuts:
   help: 191    # ?

@@ -4,6 +4,7 @@ from os import path
 from setuptools import setup
 from setuptools.command.develop import develop
 from setuptools.command.sdist import sdist
+from shutil import which
 import subprocess
 
 
@@ -24,8 +25,13 @@ class BuildWebpackBundle(Command):
                     self.webpack_environment))
 
     def run(self):
-        subprocess.check_call(['yarn', 'install'], cwd=root_dir)
-        subprocess.check_call(['yarn', 'run', 'webpack', '--mode', self.webpack_environment], cwd=root_dir)
+        yarn = which('yarn') or which('yarn.cmd')
+        if yarn is None:
+            print('Failed to find yarn or yarn.cmd on PATH; aborting')
+            return False
+
+        subprocess.check_call([yarn, 'install'], cwd=root_dir)
+        subprocess.check_call([yarn, 'run', 'webpack', '--mode', self.webpack_environment], cwd=root_dir)
 
 
 def with_build_webpack_bundle(command_class, default_webpack_environment=None):

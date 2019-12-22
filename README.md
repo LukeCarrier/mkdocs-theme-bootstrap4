@@ -34,6 +34,19 @@ next_previous: true
 
 ## Hacking
 
+First, install the dependencies:
+
+* [Python 2](https://www.python.org/downloads/), for some of our dependencies.
+* [Python 3](https://www.python.org/downloads/), for the package build process.
+* [Yarn](https://yarnpkg.com/en/docs/cli/install), for managing frontend dependencies.
+
+Ensure that Python 2 is found on your path before Python 3, else you'll get errors from `node-gyp` later. If you're unable to do this, set the environment variable `npm_config_python` to a command that'll launch Python 2 (`py -2` on Windows, `python2` elsewhere).
+
+On Windows:
+
+* It's easiest to not put Python on your path and instead rely on the [`py` CLI](https://docs.python.org/using/windows.html#python-launcher-for-windows).
+* You'll need the build tools necessary to install native dependencies: `npm install -g --production windows-build-tools`.
+
 To get completion working in your editor, set up a virtual environment in the root of this repository and install MkDocs:
 
 ```

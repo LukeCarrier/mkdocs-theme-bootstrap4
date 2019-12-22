@@ -3,6 +3,7 @@
 ## 0.3.0: Merry Christmas
 
 * Correctly detect Yarn on Windows systems
+* Document build dependencies
 
 ## 0.2.0: spring cleaning (in autumn)
 

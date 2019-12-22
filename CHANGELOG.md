@@ -4,6 +4,7 @@
 
 * Correctly detect Yarn on Windows systems
 * Document build dependencies
+* Untangle `develop` and `sdist` commands
 
 ## 0.2.0: spring cleaning (in autumn)
 

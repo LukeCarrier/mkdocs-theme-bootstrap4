@@ -19,7 +19,6 @@ class BuildWebpackBundle(Command):
         self.webpack_environment = None
 
     def finalize_options(self):
-        self.set_undefined_options('sdist', ('webpack_environment', 'webpack_environment'))
         if self.webpack_environment not in ('development', 'production'):
             raise DistutilsOptionError('Must set the Webpack environment to either "development" or "production"; was {}'.format(
                     self.webpack_environment))
@@ -34,20 +33,44 @@ class BuildWebpackBundle(Command):
         subprocess.check_call([yarn, 'run', 'webpack', '--mode', self.webpack_environment], cwd=root_dir)
 
 
-def with_build_webpack_bundle(command_class, default_webpack_environment=None):
-    class WithBuildWebpackBundle(command_class):
-        def initialize_options(self):
-            super().initialize_options()
-            self.webpack_environment = default_webpack_environment
+class WithBuildWebpackBundle:
+    user_options = [
+        ('webpack-environment=', None, 'Webpack environment ("development" or "production")'),
+    ]
 
-        def make_distribution(self):
-            self.run_command('build_webpack_bundle')
-            super().make_distribution()
+    webpack_environment = None
 
-    WithBuildWebpackBundle.user_options.append((
-            'webpack-environment=', None, 'Webpack environment ("development" or "production")'))
+    def initialize_options(self, default_webpack_environment):
+        self.webpack_environment = default_webpack_environment
 
-    return WithBuildWebpackBundle
+    def build_webpack_bundle(self, command_name):
+        cmd = self.distribution.get_command_obj('build_webpack_bundle')
+        cmd.set_undefined_options(command_name, ('webpack_environment', 'webpack_environment'))
+        self.run_command('build_webpack_bundle')
+
+
+class DevelopWithBuildWebpackBundle(develop, WithBuildWebpackBundle):
+    user_options = develop.user_options + WithBuildWebpackBundle.user_options
+
+    def initialize_options(self):
+        super().initialize_options()
+        WithBuildWebpackBundle.initialize_options(self, 'development')
+
+    def install_for_development(self):
+        super().install_for_development()
+        WithBuildWebpackBundle.build_webpack_bundle(self, 'develop')
+
+
+class SdistWithBuildWebpackBundle(sdist, WithBuildWebpackBundle):
+    user_options = sdist.user_options + WithBuildWebpackBundle.user_options
+
+    def initialize_options(self):
+        super().initialize_options()
+        WithBuildWebpackBundle.initialize_options(self, 'production')
+
+    def make_distribution(self):
+        WithBuildWebpackBundle.build_webpack_bundle(self, 'sdist')
+        super().make_distribution()
 
 
 root_dir = path.abspath(path.dirname(__file__))
@@ -61,8 +84,8 @@ setup(
     version='0.2.0',
     cmdclass={
         'build_webpack_bundle': BuildWebpackBundle,
-        'develop': with_build_webpack_bundle(develop, 'development'),
-        'sdist': with_build_webpack_bundle(sdist, 'production'),
+        'develop': DevelopWithBuildWebpackBundle,
+        'sdist': SdistWithBuildWebpackBundle,
     },
     packages=['mkdocs_bootstrap4'],
     package_data={

@@ -45,11 +45,11 @@
         {%- block site_name %}
           <a class="navbar-brand" href="{{ nav.homepage.url | url }}">{{ config.site_name }}</a>
         {%- endblock %}
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-top" aria-controls="navbar-top" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse">
+        <div id="navbar-top" class="collapse navbar-collapse">
           {%- block site_nav %}
             {%- if nav | length > 1 %}
               <nav class="nav">

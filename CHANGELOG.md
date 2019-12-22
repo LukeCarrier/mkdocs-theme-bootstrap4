@@ -2,6 +2,7 @@
 
 ## 0.3.0: Merry Christmas
 
+* Fix navigation expand/collapse on mobile
 * Correctly detect Yarn on Windows systems
 * Document build dependencies
 * Untangle `develop` and `sdist` commands

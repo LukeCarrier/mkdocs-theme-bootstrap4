@@ -40,7 +40,7 @@
   </head>
 
   <body class="{% if page and page.is_homepage %}homepage {% endif %}{%- if page and page.meta.jumbotron -%}has-jumbotron {%- endif -%}">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">
       <div class="container">
         {%- block site_name %}
           <a class="navbar-brand" href="{{ nav.homepage.url | url }}">{{ config.site_name }}</a>

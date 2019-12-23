@@ -81,7 +81,7 @@ setup(
     name='mkdocs-theme-bootstrap4',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    version='0.2.0',
+    version='0.3.0',
     cmdclass={
         'build_webpack_bundle': BuildWebpackBundle,
         'develop': DevelopWithBuildWebpackBundle,

@@ -2,6 +2,7 @@
 
 ## 0.3.0: Merry Christmas
 
+* Bump Bootstrap to 4.4
 * Fix navigation expand/collapse on mobile
 * Correctly detect Yarn on Windows systems
 * Document build dependencies

@@ -32,6 +32,15 @@ Place these additional options under the `theme:` section of your `mkdocs.yml` c
 next_previous: true
 ```
 
+### Bootstrap tables
+
+Bootstrap tables require the addition of the `table` class. To enable this, add `bootstrap4-tables` to `plugins` in `mkdocs.yml`:
+
+```yaml
+plugins:
+    - bootstrap4-tables
+```
+
 ## Hacking
 
 First, install the dependencies:

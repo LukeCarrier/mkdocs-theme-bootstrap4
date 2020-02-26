@@ -108,6 +108,9 @@ setup(
     description='A vanilla Bootstrap 4 theme',
     install_requires=['mkdocs>=1.0'],
     entry_points={
+        'mkdocs.plugins': [
+            'bootstrap4-tables = mkdocs_bootstrap4:Bootstrap4Tables',
+        ],
         'mkdocs.themes': [
             'bootstrap4 = mkdocs_bootstrap4',
         ],

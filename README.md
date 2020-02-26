@@ -62,6 +62,27 @@ To install the plugin onto a local MkDocs site in editable form:
 $ pip install --editable /path/to/mkdocs-theme-bootstrap4
 ```
 
+## Upgrading dependencies
+
+To upgrade the dependencies, install `pip-upgrader`:
+
+```console
+. venv/bin/activate
+pip install -r requirements.dev.txt
+```
+
+Then proceed to update the dependencies:
+
+```console
+pip-upgrade requirements.dev.txt
+```
+
+The node dependencies can be updated with Yarn:
+
+```console
+yarn upgrade
+```
+
 ## Releasing
 
 Build the distributable package:

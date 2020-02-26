@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0: tabulate
+
+* Make dependency upgrades a little easier
+
 ## 0.3.0: Merry Christmas
 
 * Bump Bootstrap to 4.4

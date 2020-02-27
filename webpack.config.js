@@ -6,7 +6,7 @@ module.exports = {
   entry: './main.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'mkdocs_bootstrap4', 'dist')
+    path: path.resolve(__dirname, 'mkdocsthemebootstrap4', 'dist')
   },
   plugins: [
     new webpack.ProvidePlugin({

@@ -87,9 +87,9 @@ setup(
         'develop': DevelopWithBuildWebpackBundle,
         'sdist': SdistWithBuildWebpackBundle,
     },
-    packages=['mkdocs_bootstrap4'],
+    packages=['mkdocsthemebootstrap4'],
     package_data={
-        'mkdocs_bootstrap4': [
+        'mkdocsthemebootstrap4': [
             'dist/bundle.js',
             '404.html',
             'base.html',
@@ -109,11 +109,11 @@ setup(
     install_requires=['mkdocs>=1.0'],
     entry_points={
         'mkdocs.plugins': [
-            'bootstrap4-blockquotes = mkdocs_bootstrap4:Bootstrap4Blockquotes',
-            'bootstrap4-tables = mkdocs_bootstrap4:Bootstrap4Tables',
+            'bootstrap4-blockquotes = mkdocsthemebootstrap4:Bootstrap4Blockquotes',
+            'bootstrap4-tables = mkdocsthemebootstrap4:Bootstrap4Tables',
         ],
         'mkdocs.themes': [
-            'bootstrap4 = mkdocs_bootstrap4',
+            'bootstrap4 = mkdocsthemebootstrap4',
         ],
     },
     zip_safe=False,

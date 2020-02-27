@@ -8,7 +8,7 @@ __pycache__/
 /node_modules/
 
 # Build artifacts
-/mkdocs_bootstrap4/dist/
+/mkdocsthemebootstrap4/dist/
 
 # Packaging
 /*.egg-info/

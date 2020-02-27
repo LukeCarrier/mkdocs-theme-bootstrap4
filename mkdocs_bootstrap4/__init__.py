@@ -1,1 +1,1 @@
-from .plugin import Bootstrap4Tables
+from .plugin import Bootstrap4Blockquotes, Bootstrap4Tables

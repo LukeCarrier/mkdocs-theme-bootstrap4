@@ -109,6 +109,7 @@ setup(
     install_requires=['mkdocs>=1.0'],
     entry_points={
         'mkdocs.plugins': [
+            'bootstrap4-blockquotes = mkdocs_bootstrap4:Bootstrap4Blockquotes',
             'bootstrap4-tables = mkdocs_bootstrap4:Bootstrap4Tables',
         ],
         'mkdocs.themes': [

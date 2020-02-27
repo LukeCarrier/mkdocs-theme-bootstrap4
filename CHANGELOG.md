@@ -3,6 +3,7 @@
 ## 0.4.0: tabulate
 
 * Make dependency upgrades a little easier
+* Add blockquote styling
 * Add table styling
 
 ## 0.3.0: Merry Christmas

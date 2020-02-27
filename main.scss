@@ -102,3 +102,13 @@ ul.nav li.main {
   top: 0;
   left: 100%;
 }
+
+.blockquote {
+  background: $gray-100;
+  border-left: .7rem solid $border-color;
+  padding: 1rem;
+}
+
+.blockquote :last-child {
+  margin-bottom: 0;
+}

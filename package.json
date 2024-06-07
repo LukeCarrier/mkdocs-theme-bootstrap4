@@ -10,7 +10,7 @@
     "@fortawesome/fontawesome-free": "^5.11.2",
     "bootstrap": "4.4",
     "css-loader": "^3.2.0",
-    "highlight.js": "9.17",
+    "highlight.js": "10.4",
     "jquery": "3.5",
     "node-sass": "^7.0.0",
     "popper.js": "1.16",
